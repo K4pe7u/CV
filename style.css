@@ -17,7 +17,6 @@ main {
   background-color: #cfcfcf;
   flex: 2;
   padding: 40px;
-
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,7 +24,6 @@ aside {
   background-color: #022749;
   flex: 1;
   padding: 20px;
-
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   color: #fff;
 }
