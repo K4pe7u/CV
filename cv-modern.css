@@ -1,0 +1,237 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #f4f7fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-wrapper {
+  display: flex;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.cv-sidebar {
+  background: #2c3e50;
+  color: #ecf0f1;
+  width: 320px;
+  min-width: 260px;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.cv-photo {
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0;
+  position: relative;
+  background: #bdc3c7;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
+  z-index: 1;
+}
+.cv-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cv-photo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -38px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-top: 38px solid #2c3e50;
+  z-index: 2;
+}
+
+.cv-contact,
+.cv-languages,
+.cv-personal-skills,
+.cv-interests {
+  margin-top: 38px;
+  width: 100%;
+}
+.cv-contact h2,
+.cv-languages h2,
+.cv-personal-skills h2,
+.cv-interests h2 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #7ed6df;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.cv-contact ul,
+.cv-languages ul,
+.cv-personal-skills ul,
+.cv-interests ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cv-contact li,
+.cv-languages li,
+.cv-personal-skills li,
+.cv-interests li {
+  margin-bottom: 8px;
+  font-size: 0.98em;
+}
+.cv-contact a {
+  color: #7ed6df;
+  word-break: break-all;
+}
+
+.cv-main {
+  flex: 1;
+  padding: 60px 60px 40px 60px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.cv-header {
+  margin-bottom: 18px;
+}
+.cv-header h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+.cv-header h2 {
+  font-size: 1.3em;
+  color: #3498db;
+  margin: 0 0 18px 0;
+  font-weight: 400;
+}
+.cv-main section {
+  margin-bottom: 32px;
+}
+.cv-main h3 {
+  font-size: 1.15em;
+  color: #3498db;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.cv-main h4 {
+  font-size: 1.05em;
+  color: #222;
+  margin: 0 0 2px 0;
+  font-weight: 700;
+}
+.cv-job-place,
+.cv-job-date,
+.cv-school-name,
+.cv-school-date {
+  display: block;
+  font-size: 0.98em;
+  color: #888;
+  margin-bottom: 2px;
+}
+.cv-main ul {
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+.cv-main li {
+  margin-bottom: 6px;
+  font-size: 1em;
+}
+.cv-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cv-skills-list li {
+  background: #eaf6fb;
+  color: #3498db;
+  padding: 6px 16px;
+  border-radius: 16px;
+  font-size: 0.98em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.cv-courses-projects ul,
+.cv-certificates ul {
+  list-style: disc inside;
+  margin-left: 0;
+}
+.cv-courses-projects li,
+.cv-certificates li {
+  margin-bottom: 7px;
+}
+.cv-courses-projects a {
+  color: #3498db;
+  text-decoration: none;
+}
+.cv-courses-projects a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .cv-wrapper {
+    flex-direction: column;
+    max-width: 98vw;
+  }
+  .cv-sidebar {
+    width: 100%;
+    min-width: unset;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 30px 10px 10px 10px;
+    justify-content: flex-start;
+  }
+  .cv-photo {
+    margin: 0 24px 0 0;
+  }
+  .cv-main {
+    padding: 30px 10px 20px 10px;
+  }
+}
+@media (max-width: 600px) {
+  .cv-header h1 {
+    font-size: 1.5em;
+  }
+  .cv-header h2 {
+    font-size: 1em;
+  }
+  .cv-main {
+    padding: 10px 2vw;
+  }
+}
+
+.icon-contact {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  line-height: 1;
+}
+.cv-contact li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cv-contact a {
+  display: inline-block;
+  vertical-align: middle;
+}
